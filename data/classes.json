@@ -1,0 +1,10 @@
+{
+  "math10": {
+    "name": "Geometry 10",
+    "students": ["Alice", "Bob", "Charlie", "Diane"]
+  },
+  "apcalc": {
+    "name": "AP Calculus",
+    "students": ["Eve", "Frank", "Grace", "Heidi"]
+  }
+}
