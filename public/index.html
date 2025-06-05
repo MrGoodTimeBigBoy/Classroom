@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classroom Screen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="topbar">
+    <button id="menuBtn">Menu</button>
+    <select id="classSelect"></select>
+    <div></div>
+  </div>
+  <div id="content">
+    <div id="sidebar">
+      <div id="randomizer" class="widget">
+        <h3>Random Student</h3>
+        <div id="studentName">--</div>
+        <button id="pickBtn">Pick</button>
+        <button id="resetRandom">Reset</button>
+      </div>
+      <div id="clock" class="widget">
+        <h3>Clock</h3>
+        <div id="timeDisplay">--:--:--</div>
+      </div>
+      <div id="timer" class="widget">
+        <h3>Timer</h3>
+        <div id="timerDisplay">00:00</div>
+        <button id="startTimer">Start</button>
+        <button id="stopTimer">Stop</button>
+        <button id="resetTimer">Reset</button>
+      </div>
+      <div id="countdowns" class="widget">
+        <h3>Countdowns</h3>
+        <ul id="countdownList"></ul>
+      </div>
+    </div>
+    <div id="main">
+      <iframe id="embedFrame" src=""></iframe>
+    </div>
+  </div>
+  <div id="bottombar">
+    <button id="embedBtn">Set Embed URL</button>
+  </div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

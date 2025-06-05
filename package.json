@@ -1,0 +1,14 @@
+{
+  "name": "classroom-app",
+  "version": "1.0.0",
+  "description": "Classroom management screen",
+  "type": "module",
+  "scripts": {
+    "build": "mkdir -p public && cp -r src/* public/",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5"
+  }
+}

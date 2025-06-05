@@ -1,0 +1,6 @@
+{
+  "periods": [
+    { "name": "Period 1", "start": "08:00", "end": "09:00" },
+    { "name": "Period 2", "start": "09:10", "end": "10:10" }
+  ]
+}
