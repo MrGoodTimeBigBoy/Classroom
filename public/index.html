@@ -12,6 +12,25 @@
     <select id="classSelect"></select>
     <div></div>
   </div>
+  <div id="menuPanel" class="hidden">
+    <div class="menu-content">
+      <h3>Widget Controls</h3>
+      <div class="widget-toggles">
+        <label><input type="checkbox" id="toggleRandomizer" checked> Random Student</label>
+        <label><input type="checkbox" id="toggleClock" checked> Clock</label>
+        <label><input type="checkbox" id="toggleTimer" checked> Timer</label>
+        <label><input type="checkbox" id="toggleCountdowns" checked> Countdowns</label>
+      </div>
+      <h3>Class Management</h3>
+      <div class="class-management">
+        <input type="text" id="className" placeholder="Class name">
+        <textarea id="studentList" placeholder="Student names (one per line)"></textarea>
+        <button id="addClass">Add Class</button>
+        <button id="editClass">Edit Current Class</button>
+      </div>
+      <button id="closeMenu">Close</button>
+    </div>
+  </div>
   <div id="content">
     <div id="sidebar">
       <div id="randomizer" class="widget">
@@ -27,13 +46,33 @@
       <div id="timer" class="widget">
         <h3>Timer</h3>
         <div id="timerDisplay">00:00</div>
-        <button id="startTimer">Start</button>
-        <button id="stopTimer">Stop</button>
-        <button id="resetTimer">Reset</button>
+        <div class="timer-inputs">
+          <input type="number" id="minutesInput" placeholder="Min" min="0" max="59" value="5">
+          <input type="number" id="secondsInput" placeholder="Sec" min="0" max="59" value="0">
+        </div>
+        <div class="timer-controls">
+          <button id="startTimer">Start</button>
+          <button id="stopTimer">Stop</button>
+          <button id="resetTimer">Reset</button>
+          <button id="setTimer">Set</button>
+        </div>
+        <div class="timer-mode">
+          <label>
+            <input type="radio" name="timerMode" value="up" checked> Count Up
+          </label>
+          <label>
+            <input type="radio" name="timerMode" value="down"> Count Down
+          </label>
+        </div>
       </div>
       <div id="countdowns" class="widget">
         <h3>Countdowns</h3>
         <ul id="countdownList"></ul>
+        <div class="event-controls">
+          <input type="text" id="eventName" placeholder="Event name">
+          <input type="date" id="eventDate">
+          <button id="addEvent">Add</button>
+        </div>
       </div>
     </div>
     <div id="main">

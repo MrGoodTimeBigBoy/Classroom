@@ -30,7 +30,10 @@ app.get('/api/classes', (req, res) => {
 });
 
 app.post('/api/classes', (req, res) => {
-  writeJson('classes.json', req.body);
+  const classes = readJson('classes.json');
+  const { id, name, students } = req.body;
+  classes[id] = { name, students };
+  writeJson('classes.json', classes);
   res.json({ status: 'ok' });
 });
 
@@ -48,7 +51,18 @@ app.get('/api/events', (req, res) => {
 });
 
 app.post('/api/events', (req, res) => {
-  writeJson('events.json', req.body);
+  const events = readJson('events.json');
+  const { name, date } = req.body;
+  events.push({ name, date });
+  writeJson('events.json', events);
+  res.json({ status: 'ok' });
+});
+
+app.delete('/api/events', (req, res) => {
+  const events = readJson('events.json');
+  const { name } = req.body;
+  const filtered = events.filter(event => event.name !== name);
+  writeJson('events.json', filtered);
   res.json({ status: 'ok' });
 });
 
